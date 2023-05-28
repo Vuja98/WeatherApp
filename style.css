@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --main-font: "Roboto", serif;
+  --main-gradient: linear-gradient(
+    135deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 14%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  --white-color: #eee;
+  --text-shadow: 0 3px rgba(0, 0, 0, 0.4);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--main-font);
+
+  background: var(--main-gradient);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1.5rem 1.5rem;
+}
+
+header .search {
+  width: 100%;
+  max-width: 28rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  background-color: rgba(18, 18, 18, 0.4);
+  border-radius: 1.6rem;
+  border-bottom: 3px solid #df8e00;
+  font-size: 2rem;
+  font-weight: 400;
+  transform: 0.2 ease-out;
+  color: var(--white-color);
+}
+
+header .search:focus {
+  background-color: rgba(18, 18, 18, 0.8);
+}
+
+main {
+  flex: 1 1 100%;
+  padding: 2.5rem 2.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.location--city {
+  color: var(--white-color);
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.location--date {
+  color: var(--white-color);
+  font-size: 1.6rem;
+}
+
+.current--temp {
+  color: var(--white-color);
+  font-size: 10.2rem;
+  font-weight: 700;
+  margin: 3rem 0;
+  text-shadow: 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.current--temp span {
+  font-weight: 300;
+}
+
+.current--weather {
+  color: var(--white-color);
+  font-size: 3.2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  text-shadow: var(--text-shadow);
+}
+
+.current--hi-low {
+  color: var(--white-color);
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-shadow: var(--text-shadow);
+}
